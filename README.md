@@ -1,2 +1,2 @@
-# vcolor
-Simple vector color implementation
+# color
+Simple color implementation
