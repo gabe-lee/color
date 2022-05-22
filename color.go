@@ -37,6 +37,7 @@ type IColor interface {
 }
 
 var _ IColor = (*Color32)(nil)
+var _ IColor = (*Color24)(nil)
 var _ IColor = (*Color16)(nil)
 var _ IColor = (*Color8)(nil)
 
@@ -291,6 +292,19 @@ func (c Color32) ToColorFF() ColorFF {
 func (c Color32) ToColor24() Color24 {
 	r, g, b, _ := c.RGBA()
 	return Color24{r, g, b}
+}
+
+func (c Color24) RGBA() (r uint8, g uint8, b uint8, a uint8) {
+	return c[0], c[1], c[2], 255
+}
+
+func (c Color24) ToColorFF() ColorFF {
+	r, g, b, a := c.RGBA()
+	rr := math.Clamp(minFF, float32(r)/max32, maxFF)
+	gg := math.Clamp(minFF, float32(g)/max32, maxFF)
+	bb := math.Clamp(minFF, float32(b)/max32, maxFF)
+	aa := math.Clamp(minFF, float32(a)/max32, maxFF)
+	return ColorFF{rr, gg, bb, aa}
 }
 
 func (c Color16) RGBA() (r uint8, g uint8, b uint8, a uint8) {
