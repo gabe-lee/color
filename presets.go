@@ -1,17 +1,17 @@
 package color
 
 var (
-	Black = ColorFF{0, 0, 0, 1}
-	Grey1 = ColorFF{0.1, 0.1, 0.1, 1}
-	Grey2 = ColorFF{0.2, 0.2, 0.2, 1}
-	Grey3 = ColorFF{0.3, 0.3, 0.3, 1}
-	Grey4 = ColorFF{0.4, 0.4, 0.4, 1}
-	Grey5 = ColorFF{0.5, 0.5, 0.5, 1}
-	Grey6 = ColorFF{0.6, 0.6, 0.6, 1}
-	Grey7 = ColorFF{0.7, 0.7, 0.7, 1}
-	Grey8 = ColorFF{0.8, 0.8, 0.8, 1}
-	Grey9 = ColorFF{0.9, 0.9, 0.9, 1}
-	White = ColorFF{1, 1, 1, 1}
+	Black = ColorFA{0, 0, 0, 1}
+	Grey1 = ColorFA{0.1, 0.1, 0.1, 1}
+	Grey2 = ColorFA{0.2, 0.2, 0.2, 1}
+	Grey3 = ColorFA{0.3, 0.3, 0.3, 1}
+	Grey4 = ColorFA{0.4, 0.4, 0.4, 1}
+	Grey5 = ColorFA{0.5, 0.5, 0.5, 1}
+	Grey6 = ColorFA{0.6, 0.6, 0.6, 1}
+	Grey7 = ColorFA{0.7, 0.7, 0.7, 1}
+	Grey8 = ColorFA{0.8, 0.8, 0.8, 1}
+	Grey9 = ColorFA{0.9, 0.9, 0.9, 1}
+	White = ColorFA{1, 1, 1, 1}
 
 	PureRed        = NewColorHSVA(0, 1, 1, 1)
 	PureMapleRed   = NewColorHSVA(15, 1, 1, 1)
